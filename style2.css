@@ -1,0 +1,37 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: blue;
+}
+
+.content{
+    width: 20%;
+    height: 30%;
+    transform: translate(45%);
+    border-left: 1px solid black;
+    position: absolute;
+}
+
+.bola{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rosybrown;
+    animation: mudacor 2s infinite alternate;
+}
+
+@keyframes mudacor {
+    0%{
+        box-shadow: 3px 3px 20px white;
+        background-color: black;
+        transform: translatex(200%);
+    }
+    100%{
+        box-shadow: 3px 3px 20px black;
+        background-color: white;
+        transform: translatex(-200%);
+    }
+}
