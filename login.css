@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root{
+    --background-color:black;
+    --form-background:#f7f7f7;
+    --input-form:#e7e5e5;
+    --botao-hover:#cccccc;
+    --shadow:#f5c150;
+    --span-back:#dddddd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Itim', cursive;;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    
+}
+
+.contetnt{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contetnt form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--form-background);
+    color: var(--background-color);
+    width: 45%;
+    height: 30rem;
+    line-height: 2px;
+    gap: 1rem;
+    padding: 0rem 3rem;
+    border-radius: 5px;
+    color: lightgrey;
+    }
+
+.contetnt input{
+    width: 100%;
+    height: 20%;
+    background-color:var(--input-form);
+    border-color: transparent;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.contetnt input:focus-visible{
+    outline: none;
+    border: transparent;
+    box-shadow: 1px 1px 5px var(--shadow), -1px -1px 5px var(--shadow);
+}
+
+
+
+.contetnt #botao:hover{
+    background-color: var(--botao-hover);
+    cursor: pointer;
+    box-shadow: 1px 1px 5px var(--shadow), -1px -1px 5px var(--shadow);
+}
+
+.contetnt #botao{
+    margin-top: 2rem;
+    transition: .9s ease
+}
+
+.contetnt .show{
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+.contetnt .span{
+    width: 120%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .3rem;
+}
+
+.contetnt .senha{
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+}
+
+.contetnt .usuario{
+    width: 100%;
+    height: 15%;
+}
+
+.contetnt .div-show{
+    width: 5.2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    background-color: var(--span-back);
+}
+
+.contetnt .div-show:hover{
+    box-shadow: 1px 1px 5px var(--shadow), -1px -1px 5px var(--shadow);
+    cursor: pointer;
+}
+
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(80deg,crimson,pink,purple) no-repeat;
+    width: 100vw;
+    flex-direction: column;
+    animation: posciona 10s ease infinite;
+    height: 100vh;
+    background-size: 300% 300%;
+    overflow: hidden;
+}
+
+#login{
+    width: 20%;
+    height: 10%;
+    padding: 2rem 1rem;
+    text-align: center;
+    border: 2px solid crimson;
+    background-color: transparent;
+    margin-top: 10px;
+    font-size: medium;
+    font:bold;
+    color: white;
+    transition: .3s all;
+}
+
+#login:hover{
+    box-shadow: 5px 5px 0px red;
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+h1{
+    color: white;
+    font-size: xx-large;
+}
+
+
+
+@keyframes posciona {
+    0%{
+        background-position: 0% 50%;
+    }
+    25%{
+        background-position: 25% 25%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.swirl-out-fwd {
+	-webkit-animation: swirl-out-fwd 0.65s ease-in both;
+	        animation: swirl-out-fwd 0.65s ease-in both;
+}
+
+@-webkit-keyframes swirl-out-fwd {
+    0% {
+      -webkit-transform: rotate(0) scale(1);
+              transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(540deg) scale(5);
+              transform: rotate(540deg) scale(5);
+      opacity: 0;
+    }
+  }
+  @keyframes swirl-out-fwd {
+    0% {
+      -webkit-transform: rotate(0) scale(1);
+              transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(540deg) scale(5);
+              transform: rotate(540deg) scale(5);
+      opacity: 0;
+    }
+  }
